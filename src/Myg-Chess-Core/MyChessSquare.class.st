@@ -199,17 +199,10 @@ MyChessSquare >> printOn: aStream [
 ]
 
 { #category : 'rendering' }
-MyChessSquare >> renderBishop: aPiece [
-
-	^ aPiece isWhite
-		  ifTrue: [
-			  color isBlack
-				  ifFalse: [ 'B' ]
-				  ifTrue: [ 'b' ] ]
-		  ifFalse: [
-			  color isBlack
-				  ifFalse: [ 'V' ]
-				  ifTrue: [ 'v' ] ]
+MyChessSquare >> renderBishop: aPiece [  
+	^ aPiece isWhite 	
+			  ifTrue: [ 			  color isBlack 				
+											  ifFalse: [ 'B' ] 				  ifTrue: [ 'b' ] ] 		  ifFalse: [ 			  color isBlack 				  ifFalse: [ 'V' ] 				  ifTrue: [ 'v' ] ]
 ]
 
 { #category : 'rendering' }
