@@ -32,6 +32,27 @@ MyPieceRenderingTest >> testMyBishopRendering [
 ]
 
 { #category : 'as yet unclassified' }
+MyPieceRenderingTest >> testMyBishopRenderingnew [
+
+	| whiteBishop blackBishop blackSquare whiteSquare |
+    
+    "Create the pieces and squares"
+     whiteBishop := MyWhiteBishop new.
+     blackBishop := MyBlackBishop new.
+     whiteSquare := MyWhiteChessSquare new. "White square"
+     blackSquare := MyBlackChessSquare new. "Black square"
+   	  
+     self assert: (whiteBishop renderPieceOn: whiteSquare) equals: 'B'.
+     self assert: (blackBishop renderPieceOn: whiteSquare) equals: 'V'.
+     self assert: (whiteBishop renderPieceOn: blackSquare) equals: 'b'.
+     self assert: (blackBishop renderPieceOn: blackSquare) equals: 'v'.
+	 
+
+
+    
+]
+
+{ #category : 'as yet unclassified' }
 MyPieceRenderingTest >> testMyKingRendering [
 
 	| whiteKing blackKing blackSquare whiteSquare |

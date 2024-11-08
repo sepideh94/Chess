@@ -17,7 +17,7 @@ Class {
 { #category : 'api - text weight' }
 MyChessSquare class >> black [
 
-	^ self color: Color black
+	^ MyBlackChessSquare new.
 ]
 
 { #category : 'api - text weight' }
@@ -32,7 +32,7 @@ MyChessSquare class >> color: aColor [
 { #category : 'api - text weight' }
 MyChessSquare class >> white [
 
-	^ self color: Color white
+	^ MyWhiteChessSquare new.
 ]
 
 { #category : 'arithmetic' }
@@ -196,13 +196,6 @@ MyChessSquare >> printOn: aStream [
 	aStream
 		nextPutAll: ' name: ';
 		print: name
-]
-
-{ #category : 'rendering' }
-MyChessSquare >> renderBishop: aPiece [  
-	^ aPiece isWhite 	
-			  ifTrue: [ 			  color isBlack 				
-											  ifFalse: [ 'B' ] 				  ifTrue: [ 'b' ] ] 		  ifFalse: [ 			  color isBlack 				  ifFalse: [ 'V' ] 				  ifTrue: [ 'v' ] ]
 ]
 
 { #category : 'rendering' }
