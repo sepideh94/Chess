@@ -10,3 +10,10 @@ MyBlackBishop >> renderPieceOn: aSquare [
 
 	^ aSquare renderBlackBishop
 ]
+
+{ #category : 'as yet unclassified' }
+MyBlackBishop >> vs: anElement [
+
+
+	^anElement playAgainstMyBlackBishop
+]

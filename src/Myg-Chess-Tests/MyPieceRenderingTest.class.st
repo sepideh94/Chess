@@ -79,6 +79,22 @@ MyPieceRenderingTest >> testMyKingRendering [
 ]
 
 { #category : 'as yet unclassified' }
+MyPieceRenderingTest >> testMyKingRenderingnew [
+
+	| whiteKing blackKing blackSquare whiteSquare |
+	whiteKing := MyWhiteKing new.
+	blackKing := MyBlackKing new.
+
+	whiteSquare := MyWhiteChessSquare new.
+	blackSquare := MyBlackChessSquare new.
+
+	self assert: (whiteKing renderPieceOn: whiteSquare) equals: 'K'.
+	self assert: (blackKing renderPieceOn: whiteSquare) equals: 'L'.
+	self assert: (whiteKing renderPieceOn: blackSquare) equals: 'k'.
+	self assert: (blackKing renderPieceOn: blackSquare) equals: 'l'
+]
+
+{ #category : 'as yet unclassified' }
 MyPieceRenderingTest >> testMyKnightRendering [
 
 	| whiteKnight blackKnight blackSquare whiteSquare |
@@ -102,6 +118,23 @@ MyPieceRenderingTest >> testMyKnightRendering [
 
 
     
+]
+
+{ #category : 'as yet unclassified' }
+MyPieceRenderingTest >> testMyKnightRenderingnew [
+
+	| whiteKnight blackKnight blackSquare whiteSquare |
+	
+	whiteKnight := MyWhiteKnight new.
+	blackKnight := MyBlackKnight new.
+	whiteSquare := MyWhiteChessSquare new.
+	blackSquare := MyBlackChessSquare new.
+
+
+	self assert: (whiteKnight renderPieceOn: whiteSquare) equals: 'N'.
+	self assert: (blackKnight renderPieceOn: whiteSquare) equals: 'M'.
+	self assert: (whiteKnight renderPieceOn: blackSquare) equals: 'n'.
+	self assert: (blackKnight renderPieceOn: blackSquare) equals: 'm'
 ]
 
 { #category : 'as yet unclassified' }
@@ -131,6 +164,22 @@ MyPieceRenderingTest >> testMyPawnRendering [
 ]
 
 { #category : 'as yet unclassified' }
+MyPieceRenderingTest >> testMyPawnRenderingnew [
+
+	| whitePawn blackPawn blackSquare whiteSquare |
+	whitePawn := MyWhitePawn new.
+	blackPawn := MyBlackPawn new.
+
+	whiteSquare := MyWhiteChessSquare new.
+	blackSquare := MyBlackChessSquare new.
+
+	self assert: (whitePawn renderPieceOn: whiteSquare) equals: 'P'.
+	self assert: (blackPawn renderPieceOn: whiteSquare) equals: 'O'.
+	self assert: (whitePawn renderPieceOn: blackSquare) equals: 'p'.
+	self assert: (blackPawn renderPieceOn: blackSquare) equals: 'o'
+]
+
+{ #category : 'as yet unclassified' }
 MyPieceRenderingTest >> testMyQeenRendering [
 
 	| whiteQeen blackQeen blackSquare whiteSquare |
@@ -157,6 +206,22 @@ MyPieceRenderingTest >> testMyQeenRendering [
 ]
 
 { #category : 'as yet unclassified' }
+MyPieceRenderingTest >> testMyQeenRenderingnew [
+
+	| whiteQeen blackQeen blackSquare whiteSquare |
+	whiteQeen := MyWhiteQueen new.
+	blackQeen := MyBlackQueen new.
+
+	whiteSquare := MyWhiteChessSquare new.
+	blackSquare := MyBlackChessSquare new.
+
+	self assert: (whiteQeen renderPieceOn: whiteSquare) equals: 'Q'.
+	self assert: (blackQeen renderPieceOn: whiteSquare) equals: 'W'.
+	self assert: (whiteQeen renderPieceOn: blackSquare) equals: 'q'.
+	self assert: (blackQeen renderPieceOn: blackSquare) equals: 'w'
+]
+
+{ #category : 'as yet unclassified' }
 MyPieceRenderingTest >> testMyRookRendering [
 
 	| whiteRook blackRook blackSquare whiteSquare|
@@ -176,6 +241,22 @@ MyPieceRenderingTest >> testMyRookRendering [
 	self assert: ( blackSquare renderRook: whiteRook ) equals: 'r'.
 	self assert: ( blackSquare renderRook: blackRook ) equals: 't'.
 
+]
+
+{ #category : 'as yet unclassified' }
+MyPieceRenderingTest >> testMyRookRenderingnew [
+
+	| whiteRook blackRook blackSquare whiteSquare |
+	whiteRook := MyWhiteRook new.
+	blackRook := MyBlackRook new.
+
+	whiteSquare := MyWhiteChessSquare new.
+	blackSquare := MyBlackChessSquare new.
+
+	self assert: (whiteRook renderPieceOn: whiteSquare) equals: 'R'.
+	self assert: (blackRook renderPieceOn: whiteSquare) equals: 'T'.
+	self assert: (whiteRook renderPieceOn: blackSquare) equals: 'r'.
+	self assert: (blackRook renderPieceOn: blackSquare) equals: 't'
 ]
 
 { #category : 'tests' }
